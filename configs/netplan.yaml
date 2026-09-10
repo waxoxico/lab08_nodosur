@@ -1,0 +1,22 @@
+network:
+  version: 2
+  ethernets:
+    ens18:
+      dhcp4: false
+      addresses:
+        - 10.33.195.234/25
+      nameservers:
+        addresses: [10.33.199.66]
+        search: [lab08.nodosur.cl]
+      routes:
+        - to: default
+          via: 10.33.195.129
+          metric: 100
+    ens19:
+      dhcp4: false
+      addresses:
+        - 10.33.199.66/29
+      routes:
+        - to: default
+          via: 10.33.199.70
+          metric: 200

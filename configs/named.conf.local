@@ -1,0 +1,9 @@
+zone "lab08.nodosur.cl" {
+    type primary;
+    file "/etc/bind/zones/db.lab08.nodosur.cl";
+};
+
+zone "199.33.10.in-addr.arpa" {
+    type primary;
+    file "/etc/bind/zones/db.10.33.199";
+};

@@ -1,0 +1,18 @@
+Status: active
+Logging: on (low)
+Default: deny (incoming), allow (outgoing), disabled (routed)
+New profiles: skip
+
+To                         Action      From
+--                         ------      ----
+80/tcp (Apache)            ALLOW IN    Anywhere                  
+22                         ALLOW IN    10.33.195.0/25            
+53                         ALLOW IN    10.33.199.64/29           
+22                         ALLOW IN    10.30.248.0/24            
+443/tcp                    ALLOW IN    Anywhere                  
+53/udp                     ALLOW IN    10.33.192.0/22            
+53                         ALLOW IN    10.30.248.0/24            
+80/tcp (Apache (v6))       ALLOW IN    Anywhere (v6)             
+443/tcp (v6)               ALLOW IN    Anywhere (v6)             
+80/tcp (v6)                ALLOW IN    Anywhere (v6)             
+

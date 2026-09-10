@@ -1,0 +1,33 @@
+═══ PRUEBAS DESDE SERVIDOR — Thu Sep 10 05:33:25 AM UTC 2026 ═══
+
+--- DNS directo ---
+10.33.195.234
+
+--- DNS inverso ---
+ns1.lab08.nodosur.cl.
+
+--- DNS externo (forwarding) ---
+142.250.0.101
+142.250.0.100
+
+--- Redirección HTTP → HTTPS ---
+Código: 301 → https://www.lab08.nodosur.cl/
+
+--- HTTPS ---
+Código: 200
+
+--- Configuración SSH efectiva ---
+permitrootlogin no
+pubkeyauthentication yes
+passwordauthentication no
+
+--- MariaDB (solo localhost) ---
+LISTEN 0      80         127.0.0.1:3306      0.0.0.0:*    users:(("mariadbd",pid=869,fd=21))                                                                                                                                                                                                                                                                                             
+
+--- Flujo empresarial: pedido registrado ---
+id	status	total_amount	date_created_gmt
+17	wc-processing	10000.00000000	2026-09-10 01:38:40
+
+--- Descuento de stock ---
+post_title	stock
+Taller de ceramica - Cupo individual	9

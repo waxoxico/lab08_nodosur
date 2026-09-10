@@ -1,0 +1,84 @@
+=== LOG: Acceso web (últimas 20 líneas) ===
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/css/select2.css?ver=11.1.0 HTTP/1.1" 200 2286 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/client/blocks/order-confirmation-status.css?ver=wc-11.1.0 HTTP/1.1" 200 955 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/client/blocks/order-confirmation-summary.css?ver=wc-11.1.0 HTTP/1.1" 200 1024 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/client/blocks/order-confirmation-additional-information.css?ver=wc-11.1.0 HTTP/1.1" 200 2242 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/client/blocks/order-confirmation-totals.css?ver=wc-11.1.0 HTTP/1.1" 200 2562 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/client/blocks/order-confirmation-billing-address.css?ver=wc-11.1.0 HTTP/1.1" 200 2554 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/js/selectWoo/selectWoo.full.min.js?ver=1.0.9-wc.11.1.0 HTTP/1.1" 200 22335 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/js/frontend/country-select.min.js?ver=11.1.0 HTTP/1.1" 200 1495 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/js/frontend/address-i18n.min.js?ver=11.1.0 HTTP/1.1" 200 1342 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/js/frontend/utils/custom-place-order-button.min.js?ver=11.1.0 HTTP/1.1" 200 1290 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce-paypal-payments/assets/ppcp-axo-js-Insights-EndCheckoutTracker.js?ver=4.1.2 HTTP/1.1" 200 2980 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /wp-content/plugins/woocommerce/assets/js/frontend/checkout.min.js?ver=11.1.0 HTTP/1.1" 200 5710 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart HTTP/1.1" 301 482 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:42 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart/ HTTP/1.1" 200 42578 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:46 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart HTTP/1.1" 301 482 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:46 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart/ HTTP/1.1" 200 42578 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:53 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart HTTP/1.1" 301 802 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:38:53 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart/ HTTP/1.1" 200 42578 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:39:05 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart HTTP/1.1" 301 802 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+10.30.248.6 - - [10/Sep/2026:01:39:06 +0000] "GET /index.php/finalizar-compra/order-received/17/undefinedwc/store/v1/cart/ HTTP/1.1" 200 42578 "https://10.33.195.234/index.php/finalizar-compra/order-received/17/?key=wc_order_gfCEPofSnVUqc" "Mozilla/5.0 (X11; Linux x86_64; rv:154.0) Gecko/20100101 Firefox/154.0"
+
+=== LOG: SSH - accesos y rechazos ===
+2026-09-09T23:25:42.513059+00:00 supita login[819]: FAILED LOGIN (1) on '/dev/tty1' FOR 'UNKNOWN', Authentication failure
+2026-09-09T23:29:57.543681+00:00 supita sshd[63486]: Accepted password for user from 10.30.248.6 port 52308 ssh2
+2026-09-09T23:50:30.237492+00:00 supita sshd[63729]: Accepted password for user from 10.30.248.6 port 47194 ssh2
+2026-09-10T00:10:39.227084+00:00 supita sshd[63987]: Failed password for mgonzalez from 10.30.248.6 port 42356 ssh2
+2026-09-10T00:10:43.543915+00:00 supita sshd[63987]: Accepted password for mgonzalez from 10.30.248.6 port 42356 ssh2
+2026-09-10T00:33:27.863769+00:00 supita sshd[64240]: Accepted password for mgonzalez from 10.30.248.6 port 38478 ssh2
+2026-09-10T00:33:52.133250+00:00 supita sshd[64356]: Accepted password for mgonzalez from 10.30.248.6 port 45662 ssh2
+2026-09-10T00:53:38.134302+00:00 web1 sshd[87289]: Accepted password for mgonzalez from 10.30.248.6 port 58512 ssh2
+2026-09-10T00:53:45.995980+00:00 web1 sshd[87386]: Accepted publickey for mgonzalez from 10.30.248.6 port 40064 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T01:02:33.661492+00:00 web1 sshd[87476]: Accepted publickey for mgonzalez from 10.30.248.6 port 40366 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T01:08:56.884708+00:00 web1 sshd[1053]: Accepted publickey for mgonzalez from 10.30.248.6 port 57614 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T01:29:07.514623+00:00 web1 sshd[3429]: Accepted publickey for mgonzalez from 10.30.248.6 port 59900 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T01:38:55.590640+00:00 web1 sshd[3677]: Accepted publickey for mgonzalez from 10.30.248.6 port 55690 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T04:12:41.981636+00:00 web1 sshd[4397]: Accepted publickey for mgonzalez from 10.30.248.3 port 38526 ssh2: ED25519 SHA256:HlqjdnPCG7v6qQ7+C4EYgplmdSMdalmrWfkCptuBdAM
+2026-09-10T04:12:50.203502+00:00 web1 sudo: mgonzalez : TTY=pts/0 ; PWD=/home/mgonzalez ; USER=root ; COMMAND=/usr/bin/grep -iE accepted|failed|invalid /var/log/auth.log
+
+=== LOG: DNS (BIND9) ===
+Sep 10 01:08:49 web1 named[735]: running
+Sep 10 01:08:49 web1 systemd[1]: Started named.service - BIND Domain Name Server.
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:7fe::53#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:9f::42#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:503:ba3e::2:30#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:2::c#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:2d::d#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:12::d0d#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:dc3::35#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2801:1b8:10::b#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:1::53#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:a8::e#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:500:2f::f#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:503:c27::2:30#53
+Sep 10 01:08:51 web1 named[735]: network unreachable resolving './NS/IN': 2001:7fd::1#53
+
+=== LOG: MariaDB ===
+Sep 10 01:08:50 web1 mariadbd[869]: 2026-09-10  1:08:50 0 [Note] InnoDB: End of log at LSN=12446570
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] InnoDB: 128 rollback segments are active.
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] InnoDB: Setting file './ibtmp1' size to 12.000MiB. Physically writing the file full; Please wait ...
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] InnoDB: File './ibtmp1' size is now 12.000MiB.
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] InnoDB: log sequence number 12446570; transaction id 7266
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] InnoDB: Loading buffer pool(s) from /var/lib/mysql/ib_buffer_pool
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] Plugin 'FEEDBACK' is disabled.
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Warning] You need to use --log-bin to make --expire-logs-days or --binlog-expire-logs-seconds work.
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] Server socket created on IP: '127.0.0.1', port: '3306'.
+Sep 10 01:08:51 web1 mariadbd[869]: 2026-09-10  1:08:51 0 [Note] /usr/sbin/mariadbd: ready for connections.
+Sep 10 01:08:51 web1 mariadbd[869]: Version: '10.11.14-MariaDB-0ubuntu0.24.04.1'  socket: '/run/mysqld/mysqld.sock'  port: 3306  Ubuntu 24.04
+Sep 10 01:08:52 web1 systemd[1]: Started mariadb.service - MariaDB 10.11.14 database server.
+Sep 10 01:08:52 web1 /etc/mysql/debian-start[1013]: Checking for insecure root accounts.
+Sep 10 01:08:53 web1 mariadbd[869]: 2026-09-10  1:08:53 0 [Note] InnoDB: Buffer pool(s) load completed at 260910  1:08:53
+Sep 10 01:08:53 web1 /etc/mysql/debian-start[1018]: Triggering myisam-recover for all MyISAM tables and aria-recover for all Aria tables
+
+=== LOG: Firewall (UFW) ===
+2026-09-10T00:31:02.542662+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=119 TOS=0x00 PREC=0x00 TTL=62 ID=31288 PROTO=UDP SPT=53 DPT=38698 LEN=99 
+2026-09-10T00:31:03.038406+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=141 TOS=0x00 PREC=0x00 TTL=62 ID=31349 PROTO=UDP SPT=53 DPT=57863 LEN=121 
+2026-09-10T00:31:03.839629+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=141 TOS=0x00 PREC=0x00 TTL=62 ID=31404 PROTO=UDP SPT=53 DPT=56011 LEN=121 
+2026-09-10T00:31:05.442634+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=141 TOS=0x00 PREC=0x00 TTL=62 ID=31455 PROTO=UDP SPT=53 DPT=57784 LEN=121 
+2026-09-10T00:31:29.346638+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=138 TOS=0x00 PREC=0x00 TTL=62 ID=32102 PROTO=UDP SPT=53 DPT=41843 LEN=118 
+2026-09-10T00:31:39.840634+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=141 TOS=0x00 PREC=0x00 TTL=62 ID=33448 PROTO=UDP SPT=53 DPT=37353 LEN=121 
+2026-09-10T00:33:05.595646+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=138 TOS=0x00 PREC=0x00 TTL=62 ID=51280 PROTO=UDP SPT=53 DPT=34023 LEN=118 
+2026-09-10T00:33:05.595679+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=138 TOS=0x00 PREC=0x00 TTL=62 ID=51281 PROTO=UDP SPT=53 DPT=57302 LEN=118 
+2026-09-10T00:33:06.397644+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=138 TOS=0x00 PREC=0x00 TTL=62 ID=51333 PROTO=UDP SPT=53 DPT=40371 LEN=118 
+2026-09-10T00:33:06.397685+00:00 supita kernel: [UFW BLOCK] IN=ens18 OUT= MAC=bc:24:11:9b:23:f0:ae:a3:6e:cc:6c:da:08:00 SRC=10.33.193.245 DST=10.33.195.234 LEN=138 TOS=0x00 PREC=0x00 TTL=62 ID=51334 PROTO=UDP SPT=53 DPT=44479 LEN=118 

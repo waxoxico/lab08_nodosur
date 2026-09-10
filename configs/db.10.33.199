@@ -1,0 +1,11 @@
+$TTL    604800
+@       IN      SOA     ns1.lab08.nodosur.cl. admin.lab08.nodosur.cl. (
+                              2
+                         604800
+                          86400
+                        2419200
+                         604800 )
+
+        IN      NS      ns1.lab08.nodosur.cl.
+
+66      IN      PTR     ns1.lab08.nodosur.cl.

@@ -1,0 +1,19 @@
+═══ PRUEBAS DESDE CLIENTE — jue 10 sep 2026 02:16:08 -03 ═══
+
+--- 1. Resolución DNS ---
+10.33.195.234
+
+--- 2. Resolución inversa ---
+ns1.lab08.nodosur.cl.
+
+--- 3. HTTPS ---
+Código: 200
+
+--- 4. Redirección HTTP → HTTPS ---
+Código: 301 → https://www.lab08.nodosur.cl/
+
+--- 5. SSH con llave (debe funcionar) ---
+OK: acceso con llave
+
+--- 6. SSH con contraseña (debe fallar) ---
+mgonzalez@10.33.195.234: Permission denied (publickey).

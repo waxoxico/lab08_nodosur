@@ -1,0 +1,9 @@
+Antigüedad del respaldo: < 24 h (RPO objetivo: 24 h) — CUMPLE
+ENSAYO DE RESTAURACIÓN — Thu Sep 10 05:09:21 AM UTC 2026
+Respaldo usado: wordpress-20260910.sql (3.2 MB)
+Base destino: restore_test (temporal)
+Resultado: 97 tablas restauradas correctamente
+Pedido #17 verificado: wc-processing, $10.000
+Configuración siteurl íntegra: https://www.lab08.nodosur.cl
+Tiempo de restauración: < 1 minuto (RTO objetivo: 60 min) — CUMPLE
+Antigüedad del respaldo: < 24 h (RPO objetivo: 24 h) — CUMPLE

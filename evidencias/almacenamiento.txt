@@ -1,0 +1,41 @@
+# ALMACENAMIENTO Y PERMISOS — VM web1
+Generado: Thu Sep 10 05:19:06 AM UTC 2026
+
+## Montajes persistentes (/etc/fstab)
+# /etc/fstab: static file system information.
+#
+# Use 'blkid' to print the universally unique identifier for a
+# device; this may be used with UUID= as a more robust way to name devices
+# that works even if disks are added and removed. See fstab(5).
+#
+# <file system> <mount point>   <type>  <options>       <dump>  <pass>
+# / was on /dev/ubuntu-vg/ubuntu-lv during curtin installation
+/dev/disk/by-id/dm-uuid-LVM-oXK5OcsfeRnvmUNczhD0qTGqSHu1Lxb4v286QhsCLK96XIfoTxajo9gUdnGswk9h / ext4 defaults 0 1
+# /boot was on /dev/sda2 during curtin installation
+/dev/disk/by-uuid/beb9708b-f4cd-493d-a889-c25c7a06532b /boot ext4 defaults 0 1
+/swap.img	none	swap	sw	0	0
+
+## Validación de fstab
+   [ ] source /dev/disk/by-uuid/beb9708b-f4cd-493d-a889-c25c7a06532b exists
+   [W] cannot detect on-disk filesystem type (Permission denied)
+none
+   [W] non-bind mount source /swap.img is a directory or regular file
+   [W] cannot detect on-disk filesystem type (Permission denied)
+
+## Capacidad de disco
+Filesystem                         Size  Used Avail Use% Mounted on
+/dev/mapper/ubuntu--vg-ubuntu--lv   97G  6.3G   86G   7% /
+
+## Uso del árbol web y respaldos
+420M	/var/www/html
+322M	/var/backups/wordpress
+
+## Propietarios y permisos
+/var/www → root:root 755
+/var/www/html → www-data:www-data 755
+/var/www/html/wp-config.php → www-data:www-data 640
+/var/www/html/wp-content → www-data:www-data 755
+/var/backups/wordpress → root:root 750
+
+## Archivos con permisos 777 (debe ser 0)
+0
