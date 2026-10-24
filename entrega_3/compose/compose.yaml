@@ -1,0 +1,46 @@
+# Nodo web del CMS — Grupo Tas_08 · Nodo Sur
+# La misma definición sirve en VM2 (web1) y VM3 (web2); solo cambia el .env.
+#
+# Dependencias EXTERNAS. No se declaran con depends_on porque no son servicios de este Compose:
+#   - MariaDB en VM4 (10.33.199.68:3306). La conexión y sus credenciales viven en
+#     /var/www/html/wp-config.php del host, fuera del repositorio y de las imágenes.
+#   - Export NFS /srv/nfs/wp-content de VM4, que monta el volumen wp_content de este archivo.
+#   - Núcleo de WordPress y wp-config.php en /var/www/html del host (línea base nativa).
+#   - Restricción de origen del puerto publicado: regla de DOCKER-USER (carpeta host/).
+
+name: nodosur-web
+
+services:
+  wordpress:
+    image: wordpress:${WP_IMAGE_TAG}
+    container_name: ${NODE_NAME}
+    hostname: ${NODE_NAME}
+    restart: unless-stopped
+    environment:
+      NODE_NAME: ${NODE_NAME}
+    ports:
+      - "${PUBLISH_IP}:${PUBLISH_PORT}:80"
+    volumes:
+      - /var/www/html:/var/www/html
+      - wp_content:/var/www/html/wp-content
+      - ./apache/headers.load:/etc/apache2/mods-enabled/headers.load:ro
+      - ./apache/backend-id.conf:/etc/apache2/conf-enabled/backend-id.conf:ro
+    networks:
+      - app_front
+    healthcheck:
+      test: ["CMD-SHELL", "curl -fsS -H 'Host: www.lab08.nodosur.cl' http://127.0.0.1/health.php | grep -q '^OK'"]
+      interval: 10s
+      timeout: 5s
+      retries: 3
+      start_period: 20s
+
+volumes:
+  wp_content:
+    driver: local
+    driver_opts:
+      type: nfs
+      o: addr=${NFS_ADDR},vers=4.2,rw
+      device: ":${NFS_PATH}"
+
+networks:
+  app_front:
