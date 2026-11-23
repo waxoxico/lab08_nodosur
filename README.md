@@ -96,7 +96,7 @@ corresponde a la Entrega 2 y se conserva sin cambios.*
 |---|---|---|---|
 | 1 · Requerimientos y arquitectura | `entrega-1/` | Decisiones de arquitectura y bitácora | `E01` |
 | 2 · Plataforma base y CMS | raíz (`configs/`, `evidencias/`, `inventario.txt`, bitácoras) | Instalación nativa en una VM, configuraciones saneadas y evidencias | `E02` |
-| 3 · Publicación resiliente | `entrega_3/` | Nodo web en Docker Compose, regla `DOCKER-USER`, script de validación y bitácora | — |
+| 3 · Publicación resiliente | `entrega_3/` | Nodo web en Docker Compose, regla `DOCKER-USER`, script de validación y bitácora | `E03` |
 | 4 · Observabilidad y continuidad | `entrega-4/` | Monitoreo (Prometheus, Alertmanager, Grafana), alertas por correo, registros centralizados, respaldo y restauración, runbook, auditoría y bitácora | `E04` |
 
 **Arquitectura actual:** cuatro VMs. VM1 `proxy1` (DNS, HAProxy con TLS,
