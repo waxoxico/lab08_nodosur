@@ -710,3 +710,54 @@ Antes de modificar red, firewall o SSH se mantuvo abierta la consola de Proxmox,
 | Segmentación, firewall y secretos | UFW por origen, base y NFS restringidos por host, `DOCKER-USER` con antes y después, secretos fuera del Compose y del repositorio |
 | Prueba de falla y recuperación | Tres ejecuciones, dos tipos de falla, línea de tiempo de tres fuentes y reversión de un comando |
 | Análisis de disponibilidad | Puntos únicos de falla identificados; **falta el documento** |
+
+---
+
+> **Complemento agregado el 23/11/2026.** Las dos secciones siguientes se
+> escribieron en la versión de trabajo de esta bitácora después de la entrega
+> del 24/10 y no se habían subido al repositorio. Se agregan al final para no
+> alterar el texto entregado, que queda sin cambios hasta la sección «Qué se
+> demostró, criterio por criterio». La versión entregada está identificada con
+> la etiqueta `E03`.
+
+## Cierre de la Entrega 3
+
+**Entregado el 23/10.** La carpeta `entrega_3` se subió al repositorio `waxoxico/lab08_nodosur`, junto a las carpetas de las entregas anteriores, con esta estructura:
+
+```
+entrega_3/
+├── README.md                       arquitectura, dependencias y reconstrucción desde cero
+├── bitacora-entrega-3.md           este documento
+├── compose/                        compose.yaml, .env.example, .gitignore y apache/
+├── host/                           docker-user-rules.sh y su unidad de systemd
+└── scripts/validar.sh              validación de solo lectura, en dos modos
+```
+
+Se verificó antes de subir que no viajara ningún `.env`, certificado, llave ni archivo con contraseñas.
+
+**Documento de defensa.** Aparte de esta bitácora se preparó una guía para la presentación, con la arquitectura y su diagrama, las rutas de cada máquina, la trazabilidad de cada configuración hasta su clase de origen, la cronología del período, los siete criterios desarmados uno por uno, las preguntas probables y los comandos para demostrar en vivo.
+
+**Pendientes al cierre.** Tres eran de documentación y no de implementación: el informe con el análisis de disponibilidad, la matriz de flujos y sanear el `haproxy.cfg` antes de incluirlo. Quedaron además dos detalles del repositorio: el archivo `compose/.env.example`, que el navegador no sube por empezar con punto, y la etiqueta `E03`.
+
+---
+
+## Hacia la Entrega 4 — monitorización
+
+Lo que ya existe y sirve de punto de partida:
+
+| Pieza | Dónde | Qué aporta |
+|---|---|---|
+| Tarea programada de alertas | VM1, cada minuto | Avisa por `wall` cuando un backend cae. Falla cuando no obtiene datos: arma el mensaje con campos vacíos |
+| `health.php` | Los dos nodos | Recorre la pila completa, incluido el intérprete |
+| Chequeo de capa 7 en HAProxy | VM1 | Retira y reintegra nodos según salud real |
+| Panel de estadísticas | `10.33.195.180:32500` | Estado de los backends en vivo |
+| `/var/log/haproxy.log` | VM1 | Cada petición con su backend y su código |
+| `validar.sh` | Las tres VMs | Comprobación de estado de solo lectura |
+
+Lo que falta, y que la Entrega 4 pedirá: recolección centralizada de métricas, paneles, alertas con destino definido y umbrales, y registros fuera del host. También siguen abiertos el método de medición de disponibilidad, que viene arrastrado desde la Entrega 1, y la centralización de logs.
+
+
+> **Estado de los dos pendientes del repositorio (23/11/2026):** el archivo
+> `compose/.env.example` se subió como `.env.example.` y se corrigió su nombre
+> en el commit `11ff6ef`, junto con el `.gitignore`; la etiqueta `E03` se creó
+> sobre el commit `cf30198`, el último de la entrega.
