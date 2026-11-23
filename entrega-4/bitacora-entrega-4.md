@@ -2108,6 +2108,55 @@ bitácora de la Entrega 3 y esta bitácora. El informe v2 pasó de 50 a
 **56 páginas**. El diagrama está en `capturas/E4_arquitectura_final.png`.
 ---
 
+## Publicación en GitHub · 23/11/2026
+
+Repositorio `waxoxico/lab08_nodosur`, rama `main`. Clon local en
+`entrega4\repo-github\`.
+
+| Commit | Contenido |
+|---|---|
+| `11ff6ef` | Entrega 3: el archivo `.env.example.` (con un punto final, un nombre que Windows no puede crear y que impedía clonar el repositorio) se renombró a `.env.example` sin cambiar su contenido, y se agregó el `.gitignore` que su README ya documentaba. Cierra el pendiente de la auditoría (sección 4) |
+| `41292cf` | Entrega 4: carpeta `entrega-4/` (43 archivos) e índice por entrega agregado **al final** del README raíz, sin modificar su texto anterior |
+
+Etiqueta **`E04`**, con el mismo formato que `E01` y `E02`. Antes del commit,
+la carpeta se revisó contra los valores del archivo privado de credenciales:
+ninguna clave aparece; las coincidencias son nombres de usuario, el nombre de
+la base, la huella pública de la CA y palabras comunes. Se verificó con
+`git ls-remote` que `main` y `E04` apuntan al commit `41292cf`.
+
+---
+
+## Revisión de todas las bitácoras y complementos · 23/11/2026
+
+Para que el informe abarque las cuatro entregas sin contradicciones, se
+revisaron todas las bitácoras del proyecto: las del repositorio (rama `main`
+completa y todo su historial; no hay otras ramas, forks ni wiki) y las 25
+copias encontradas en el equipo. Se compararon por contenido, sin contar los
+saltos de línea.
+
+| Bitácora | Resultado de la comparación |
+|---|---|
+| `entrega-1/decisiones.md` (E1, AD-01 a AD-08) | Idéntica a la copia local. No se había usado en el Anexo F: se agregó la sección F.5 |
+| `bitacora-contribuciones.md` (E2) y `entrega-1/bitacora-e1.md` | Idénticas entre sí: la segunda es una copia de la primera, que es de la Entrega 2 |
+| `bitacora-instalacion.md` (E2) | Solo existe en el repositorio; usada en el Anexo F |
+| `entrega_3/bitacora-entrega-3.md` | Idéntica a las copias de octubre. La versión de trabajo del 16/11 tenía dos secciones más, que no se habían subido |
+| Borradores de la E3 (`Downloads\TAS`, cuatro versiones de octubre) | Todo su contenido está en la versión final; las diferencias son títulos renombrados |
+| `contexto-monitoreo-haproxy.md` (sesión del 16/11) | Ya cubierto por la tabla de incidentes de esta bitácora. Contiene claves: no se publica |
+| Esta bitácora | Copia saneada idéntica en el repositorio |
+
+**Complementos aplicados, todos agregando y sin modificar texto existente:**
+
+| Dónde | Qué |
+|---|---|
+| Informe v2, Anexo F | **F.5** contrasta las ocho decisiones de la Entrega 1 con la implementación (seis se mantuvieron, AD-02 cambió y AD-05 se corrigió). **F.6** completa las contribuciones por integrante de la Entrega 3, que no estaban en el informe (el Anexo A cubre E1 y E2, y E.12 la E4). El diagrama pasa a F.7. El informe queda en **57 páginas**, con 0 líneas originales cambiadas |
+| Informe v2, F.2 | La fila «Restauración» se precisó contra `evidencias/ensayo-restauracion.txt` de la Entrega 2: aquel ensayo verificó un pedido y la URL del sitio por consulta, pero no el CMS funcionando |
+| Repositorio, `entrega_3/bitacora-entrega-3.md` | Se agregaron al final las secciones «Cierre de la Entrega 3» y «Hacia la Entrega 4», con una nota; el texto entregado quedó intacto (commit `753b291`) |
+| Repositorio, etiqueta **`E03`** | Creada sobre `cf30198`, el último commit de la Entrega 3. Era un pendiente anotado al cierre de esa entrega |
+| Repositorio, `README.md` | El índice por entrega indica la etiqueta `E03` (commit `f6850f0`) |
+
+Las etiquetas quedan así: `E01`, `E02`, `E03` y `E04`, una por entrega.
+---
+
 > **Nota de la copia publicada en GitHub:** en esta copia se reemplazaron por
 > `[clave omitida]` tres contraseñas antiguas del texto original (líneas 104,
 > 651 y 950). Esas claves ya fueron rotadas y hoy se leen desde un `.env` que no
