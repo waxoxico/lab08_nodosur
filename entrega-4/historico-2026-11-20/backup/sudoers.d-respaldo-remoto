@@ -1,0 +1,1 @@
+xavineta2026 ALL=(root) NOPASSWD: /usr/bin/tar -czf - /etc/haproxy /etc/bind /etc/ssl/haproxy /srv/monitoring

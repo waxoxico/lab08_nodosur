@@ -1,0 +1,6 @@
+[Unit]
+Description=Retencion de logs centralizados de Nodo Sur (30 dias)
+
+[Service]
+Type=oneshot
+ExecStart=/usr/local/sbin/limpieza-logs-nodosur.sh

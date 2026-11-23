@@ -1,0 +1,13 @@
+# VM1: logs centralizados de Nodo Sur
+# Retencion de 30 dias, alineada con la politica de respaldos
+/var/log/nodosur/*/*.log {
+    daily
+    rotate 30
+    compress
+    delaycompress
+    missingok
+    notifempty
+    create 0640 syslog adm
+    dateext
+    dateformat -%Y%m%d
+}

@@ -1,0 +1,9 @@
+[Unit]
+Description=Ejecuta la retencion de logs de Nodo Sur cada dia
+
+[Timer]
+OnCalendar=*-*-* 03:30:00
+Persistent=true
+
+[Install]
+WantedBy=timers.target

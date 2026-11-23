@@ -1,0 +1,125 @@
+# Reglas de alerta de Nodo Sur
+# Destino en VM1: /srv/monitoring/prometheus/alert.rules.yml
+#
+# Cada regla declara umbral (expr), duracion (for), severidad y responsable.
+# La anotacion "accion" enlaza con el procedimiento del runbook.
+
+groups:
+  - name: disponibilidad
+    rules:
+
+      - alert: BackendCaido
+        expr: haproxy_server_status{state="UP"} == 0
+        for: 1m
+        labels:
+          severidad: critica
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "Backend {{ $labels.server }} fuera de rotacion"
+          detalle: "El servidor lleva mas de 1 minuto sin pasar el health check."
+          accion: "Revisar el contenedor: docker compose ps y docker compose logs"
+
+      - alert: TodosLosBackendsCaidos
+        expr: haproxy_backend_active_servers{proxy="aplicaciones_web"} == 0
+        for: 1m
+        labels:
+          severidad: critica
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "SITIO FUERA DE SERVICIO: ningun backend activo"
+          detalle: "HAProxy no tiene backends disponibles."
+          accion: "Verificar los dos nodos web y la base de datos en VM4"
+
+      - alert: ErroresServidorAltos
+        expr: sum(rate(haproxy_backend_http_responses_total{code="5xx"}[5m])) by (proxy) > 0.1
+        for: 5m
+        labels:
+          severidad: aviso
+          responsable: equipo-aplicacion
+        annotations:
+          resumen: "Tasa de errores 5xx elevada"
+          detalle: "Los backends responden, pero con error."
+          accion: "Revisar debug.log y la conexion a MariaDB en VM4"
+
+      - alert: ExportadorSinDatos
+        expr: up{job="haproxy-native"} == 0
+        for: 2m
+        labels:
+          severidad: aviso
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "Prometheus no recolecta metricas de HAProxy"
+          detalle: "El monitoreo esta ciego, aunque el servicio puede seguir operando."
+          accion: "Comprobar el puerto 8405 y las reglas de UFW"
+
+  - name: recursos
+    rules:
+
+      - alert: MaquinaSinResponder
+        expr: up{job="node"} == 0
+        for: 2m
+        labels:
+          severidad: critica
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "La maquina {{ $labels.maquina }} no responde"
+          detalle: "Prometheus lleva 2 minutos sin obtener metricas de {{ $labels.maquina }} ({{ $labels.rol }})."
+          accion: "Comprobar la VM en Proxmox y el servicio prometheus-node-exporter"
+
+      - alert: DiscoCasiLleno
+        expr: 100 - (node_filesystem_avail_bytes{mountpoint="/"} / node_filesystem_size_bytes{mountpoint="/"} * 100) > 85
+        for: 10m
+        labels:
+          severidad: aviso
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "Disco de {{ $labels.maquina }} por encima del 85%"
+          detalle: "Capacidad comprometida. En db1 afecta a los respaldos y al contenido compartido por NFS."
+          accion: "Revisar /var/backups/nodosur y la rotacion de logs"
+
+      - alert: CpuAlta
+        expr: 100 - (avg by (maquina) (rate(node_cpu_seconds_total{mode="idle"}[5m])) * 100) > 85
+        for: 10m
+        labels:
+          severidad: aviso
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "CPU de {{ $labels.maquina }} sobre 85% sostenido"
+          detalle: "Saturacion de procesador durante 10 minutos."
+          accion: "Identificar el proceso con top y evaluar si corresponde a carga legitima"
+
+  - name: respaldos
+    rules:
+
+      - alert: RespaldoNoEjecutado
+        expr: time() - respaldo_ultimo_exito_timestamp > 93600
+        for: 10m
+        labels:
+          severidad: critica
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "Sin respaldo correcto en mas de 26 horas"
+          detalle: "El ultimo respaldo correcto fue hace {{ $value | humanizeDuration }}. El objetivo de RPO es 24 h."
+          accion: "Revisar el temporizador: systemctl status respaldo-nodosur.timer y /var/log/respaldo-nodosur.log en VM4"
+
+      - alert: RespaldoDemasiadoPequeno
+        expr: respaldo_tamano_bytes < 50000000
+        for: 10m
+        labels:
+          severidad: critica
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "El ultimo respaldo es sospechosamente pequeno"
+          detalle: "Tamano actual {{ $value | humanize1024 }}B, cuando lo normal son unos 77 MB. Posible respaldo incompleto."
+          accion: "Verificar el contenido y los checksums en /var/backups/nodosur"
+
+      - alert: RespaldoIncompleto
+        expr: respaldo_avisos > 0
+        for: 10m
+        labels:
+          severidad: aviso
+          responsable: equipo-infraestructura
+        annotations:
+          resumen: "El ultimo respaldo no incluyo todos los componentes"
+          detalle: "{{ $value }} componente(s) no se pudieron respaldar (configuracion remota o rotacion)."
+          accion: "Revisar las lineas AVISO en /var/log/respaldo-nodosur.log de VM4"

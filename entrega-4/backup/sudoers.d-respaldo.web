@@ -1,0 +1,3 @@
+# VM2 (web1) y VM3 (web2): /etc/sudoers.d/respaldo  (modo 440, validar con visudo -cf antes de instalar)
+# Unico permiso de la cuenta de servicio "respaldo": un tar de solo lectura con argumentos fijos.
+respaldo ALL=(root) NOPASSWD: /usr/bin/tar -czf - -C / srv/tas var/www/html/wp-config.php etc/apache2 etc/ufw etc/rsyslog.d etc/netplan etc/fstab etc/systemd/system usr/local/sbin usr/local/bin

@@ -1,0 +1,42 @@
+# Alertmanager en VM1
+# Destino: /srv/monitoring/alertmanager/alertmanager.yml
+#
+# El canal es correo, entregado por un Postfix local restringido a
+# 127.0.0.1 y a la puerta de enlace de la red de Docker (172.18.0.1).
+
+global:
+  smtp_smarthost: '172.18.0.1:25'
+  smtp_from: 'alertas@lab08.nodosur.cl'
+  smtp_require_tls: false
+
+route:
+  receiver: 'infraestructura'
+  group_by: ['alertname', 'proxy']
+  # Espera a agrupar alertas relacionadas antes de notificar
+  group_wait: 30s
+  group_interval: 5m
+  # Evita el ruido de repetir el mismo aviso continuamente
+  repeat_interval: 4h
+  # El orden importa: gana la primera ruta que coincide
+  routes:
+    - matchers:
+        - responsable = equipo-aplicacion
+      receiver: 'aplicacion'
+    - matchers:
+        - severidad = critica
+      receiver: 'infraestructura'
+      repeat_interval: 1h
+
+receivers:
+  - name: 'infraestructura'
+    email_configs:
+      - to: 'xavineta2026@proxy1.lab08.nodosur.cl'
+        # Notifica tambien la recuperacion, no solo la caida
+        send_resolved: true
+
+  - name: 'aplicacion'
+    email_configs:
+      - to: 'equipo-app@proxy1.lab08.nodosur.cl'
+        send_resolved: true
+        headers:
+          Subject: '[APLICACION] {{ .CommonAnnotations.resumen }}'

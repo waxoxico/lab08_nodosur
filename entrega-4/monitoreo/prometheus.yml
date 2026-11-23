@@ -1,0 +1,48 @@
+# Configuracion de Prometheus en VM1
+# Destino: /srv/monitoring/prometheus/prometheus.yml
+
+global:
+  scrape_interval: 15s
+  evaluation_interval: 15s
+
+rule_files:
+  - /etc/prometheus/alert.rules.yml
+
+alerting:
+  alertmanagers:
+    - static_configs:
+        - targets: ['alertmanager:9093']
+
+scrape_configs:
+  # Monitoreo interno de la propia base de datos Prometheus
+  - job_name: 'prometheus'
+    static_configs:
+      - targets: ['localhost:9090']
+
+  # Exportador externo de HAProxy (lee el CSV del panel de stats)
+  - job_name: 'haproxy'
+    static_configs:
+      - targets: ['haproxy-exporter:9101']
+
+  # Exportador integrado de HAProxy: es el que alimenta el dashboard
+  - job_name: 'haproxy-native'
+    static_configs:
+      - targets: ['10.33.195.180:8405']
+
+  # Metricas de sistema de las cuatro maquinas
+  - job_name: 'node'
+    static_configs:
+      - targets: ['172.18.0.1:9100']
+        labels: {maquina: 'proxy1', rol: 'balanceador'}
+      - targets: ['10.33.199.66:9100']
+        labels: {maquina: 'web1', rol: 'backend'}
+      - targets: ['10.33.199.67:9100']
+        labels: {maquina: 'web2', rol: 'backend'}
+      - targets: ['10.33.199.68:9100']
+        labels: {maquina: 'db1', rol: 'base-de-datos'}
+
+  # Motor de base de datos en VM4
+  - job_name: 'mysql'
+    static_configs:
+      - targets: ['10.33.199.68:9104']
+        labels: {maquina: 'db1', servicio: 'mariadb'}

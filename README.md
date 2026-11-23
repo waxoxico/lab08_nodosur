@@ -84,3 +84,27 @@ ssh -o PreferredAuthentications=password -o PubkeyAuthentication=no mgonzalez@10
 ## Nota sobre credenciales
 
 Ninguna configuración de este repositorio contiene contraseñas, llaves privadas ni datos personales. El archivo `configs/wp-config.php.ejemplo` tiene sus credenciales reemplazadas por `REDACTADO`.
+
+---
+
+## Índice del repositorio por entrega
+
+*Sección agregada el 23/11/2026 en la Entrega 4. Lo anterior de este README
+corresponde a la Entrega 2 y se conserva sin cambios.*
+
+| Entrega | Carpeta | Contenido | Etiqueta |
+|---|---|---|---|
+| 1 · Requerimientos y arquitectura | `entrega-1/` | Decisiones de arquitectura y bitácora | `E01` |
+| 2 · Plataforma base y CMS | raíz (`configs/`, `evidencias/`, `inventario.txt`, bitácoras) | Instalación nativa en una VM, configuraciones saneadas y evidencias | `E02` |
+| 3 · Publicación resiliente | `entrega_3/` | Nodo web en Docker Compose, regla `DOCKER-USER`, script de validación y bitácora | — |
+| 4 · Observabilidad y continuidad | `entrega-4/` | Monitoreo (Prometheus, Alertmanager, Grafana), alertas por correo, registros centralizados, respaldo y restauración, runbook, auditoría y bitácora | `E04` |
+
+**Arquitectura actual:** cuatro VMs. VM1 `proxy1` (DNS, HAProxy con TLS,
+monitoreo, correo, registros centrales), VM2 `web1` y VM3 `web2` (WordPress
+7.1.3 en contenedores) y VM4 `db1` (MariaDB, NFS y respaldo automático). El
+diagrama está en `entrega-4/capturas/E4_arquitectura_final.png` y el detalle
+en `entrega-4/README.md`.
+
+**Secretos:** ninguna carpeta contiene contraseñas, llaves privadas ni datos
+personales. Los valores reales viven en archivos `.env` excluidos por
+`.gitignore`; se publican solo los `.env.example`.

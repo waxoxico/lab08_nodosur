@@ -1,0 +1,3 @@
+# VM1 (proxy1): /etc/sudoers.d/respaldo  (modo 440, validar con visudo -cf antes de instalar)
+# Unico permiso de la cuenta de servicio "respaldo": un tar de solo lectura con argumentos fijos.
+respaldo ALL=(root) NOPASSWD: /usr/bin/tar -czf - -C / etc/haproxy etc/bind etc/ssl/haproxy srv/monitoring etc/ufw etc/postfix etc/aliases etc/rsyslog.d etc/netplan etc/systemd/system etc/sudoers.d usr/local/sbin usr/local/bin
