@@ -2157,6 +2157,26 @@ saltos de línea.
 Las etiquetas quedan así: `E01`, `E02`, `E03` y `E04`, una por entrega.
 ---
 
+## Entrega en el aula · 23/11/2026
+
+Se subió al aula el informe v2 con formato revisado (56 páginas): sin páginas
+en blanco, títulos junto a su contenido, figuras junto a su leyenda y filas de
+tabla sin cortar. El texto no cambió respecto de la versión con el Anexo F
+(0 líneas distintas). Archivos entregados, comprobados idénticos byte a byte a
+`entrega-4-final/E01_E04_grupo08_informe_v2.docx` y `.pdf`:
+
+| Archivo entregado | Formato |
+|---|---|
+| `informe_final_grupo08.docx` | Word, editable |
+| `Informefinal_grupo08.pdf` | PDF, 56 páginas |
+
+El repositorio quedó publicado con las etiquetas `E01` a `E04`.
+
+**Actualización:** se volvió a subir al aula con el nombre que pide el
+enunciado (formato `E##_grupo##_descripcion.ext`): `E04_grupo08_informe.docx`
+y `E04_grupo08_informe.pdf`, también idénticos byte a byte a la versión final.
+---
+
 > **Nota de la copia publicada en GitHub:** en esta copia se reemplazaron por
 > `[clave omitida]` tres contraseñas antiguas del texto original (líneas 104,
 > 651 y 950). Esas claves ya fueron rotadas y hoy se leen desde un `.env` que no
